@@ -9,13 +9,14 @@ const Wrapper = styled.div`
   width:1.4em;
   display: inline-block;
  }
-
 `
 
 
 
 interface IconProps {
   name: string;
+  onClick:React.MouseEventHandler<SVGElement>       // 可以根据提示写出 onclick 的类型
+  // onClick:()=> void            // 也可以这样写, 但是返回值 可能会出现错误
 }
 
 
@@ -24,10 +25,9 @@ interface IconProps {
 const Icon: React.FunctionComponent<IconProps> = (props) => {
   return (
     <Wrapper>
-        <svg>
+        <svg onClick={props.onClick}>
           <use xlinkHref={'#' + props.name}/>
         </svg>
-
     </Wrapper>
   );
 };

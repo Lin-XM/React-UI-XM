@@ -3,12 +3,17 @@ import './App.css';
 import Button from './components/Button';
 import Icon from './components/Icon';
 
+
+const f1 = (event:React.MouseEvent<SVGElement | SVGUseElement>)=>{
+  console.log(event.target);
+}
+
 function App() {
   return (
-    <div className="App">
+    <div className="App" >
       <span>hi</span>
       <Button/>
-      <Icon name='settings' />
+      <Icon name='settings' onClick={f1} />
     </div>
   );
 }
