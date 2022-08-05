@@ -60,12 +60,22 @@ svgo-loader@2.2.1
 
 - 如何直接引入 SVG 文件夹
 由于 typescript 不认识 js 的代码，需要安装 `yarn add --dev @types/webpack-env@1.15.1`  
-```js
+```tsx
 let importAll = (requireContext: __WebpackModuleApi.RequireContext) => requireContext.keys().forEach(requireContext);
 try {importAll(require.context('icons', true, /\.svg$/));} catch (error) {console.log(error);}
 ```
 - tree-shaking
 有一个入口文件，相当于一棵树的主干，入口文件有很多依赖的模块，相当于树枝。实际情况中，虽然依赖了某个模块，但其实只使用其中的某些功能。通过 Tree-Shaking，将没有使用的模块摇掉，这样来达到删除无用代码的目的。
+- 解决className 问题  
+多个 className，用户需要传入其中若干个或不传，原本存在一个，但是之间不能相互干扰。
+```ts
+function classes(...names:(string | undefined)[]){
+  // 加上 Boolean 是因为 判断是否为真，就返回真，
+  return names.filter(Boolean).join(' ')
+}
+
+export default  classes
+```
 
 
 

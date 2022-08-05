@@ -13,7 +13,7 @@ function App() {
     <div className="App" >
       <span>hi</span>
       <Button/>
-      <Icon name='settings' onClick={f1} />
+      <Icon className='xiaoming' name='settings' onClick={f1}  />
     </div>
   );
 }
