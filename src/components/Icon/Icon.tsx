@@ -1,22 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
-import classes from '../helper/classes';
+import classes from '../../helper/classes';
 
 // 引入所有的 SVG 文件
 let importAll = (requireContext: __WebpackModuleApi.RequireContext) =>
   requireContext.keys().forEach(requireContext);
 try {
-  importAll(require.context('../assets/icons/', true, /\.svg$/));
+  importAll(require.context('../../assets/icons/', true, /\.svg$/));
 } catch (error) {
   console.log(error);
 }
 // css 代码
-const Wrapper = styled.div`
-   > svg{
+const Wrapper = styled.svg`
     height: 1.4em;
     width:1.4em;
-    display: inline-block;
-   }
 `;
 
 
@@ -30,10 +27,8 @@ interface IconProps extends React.SVGAttributes<SVGElement> {
 const Icon: React.FunctionComponent<IconProps> = (props) => {
   const {className, name, ...resetProps} = props;
   return (
-    <Wrapper>
-      <svg  {...resetProps} className={classes('xm-icon', className)}>
+    <Wrapper {...resetProps} className={classes('xm-icon', className)}>
         <use xlinkHref={'#' + name}/>
-      </svg>
     </Wrapper>
   );
 };

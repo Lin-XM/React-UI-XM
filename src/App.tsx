@@ -1,20 +1,45 @@
 import React from 'react';
+import { HashRouter as Router, Link, Route} from 'react-router-dom'
 import './App.css';
-import Button from './components/Button';
-import Icon from './components/Icon';
+import iconExample from './components/Icon/iconExample';
+import buttonExample from './components/Button/buttonExample';
+import dialogExample from './components/Dialog/dialogExample';
+import Icon from './components/Icon/Icon'
 
-
-const f1 = (event:React.MouseEvent<SVGElement | SVGUseElement>)=>{
-  console.log(event.target);
-}
 
 function App() {
   return (
-    <div className="App" >
-      <span>hi</span>
-      <Button/>
-      <Icon className='xiaoming' name='settings' onClick={f1}  />
-    </div>
+    <Router>
+      <div>
+        <header>
+          <div className="logo">标题</div>
+        </header>
+      </div>
+      <div>
+        <aside>
+          <h2>组件</h2>
+          <ul>
+            <li>
+              <Link to='/icon'>
+                <span><Icon name='settings' />Icon</span>
+              </Link>
+            </li>
+            <li>
+              <Link to='/button'>Button</Link>
+            </li>
+            <li>
+              <Link to='/dialog'>Dialog</Link>
+
+            </li>
+          </ul>
+        </aside>
+        <main>
+          <Route path='/icon' component={iconExample} />
+          <Route path='/Button' component={buttonExample} />
+          <Route path='/dialog' component={dialogExample} />
+        </main>
+      </div>
+    </Router>
   );
 }
 

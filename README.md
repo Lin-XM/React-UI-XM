@@ -73,9 +73,13 @@ function classes(...names:(string | undefined)[]){
   // 加上 Boolean 是因为 判断是否为真，就返回真，
   return names.filter(Boolean).join(' ')
 }
-
 export default  classes
 ```
+## Dialog
+- 三种模式  
+alert：弹出对话框，只有确定按钮，确定后执行某个函数。  
+confirm：交互对话框，有确定和取消按钮，分别执行对应函数。  
+modal：内容对话框，仅展示内容，只有点右上角 叉叉 取消。  
 
 
 
