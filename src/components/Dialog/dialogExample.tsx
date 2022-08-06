@@ -2,9 +2,16 @@ import React, {useState} from 'react';
 import Dialog from './Dialog';
 import {alert} from './Dialog'
 import {confirm} from './Dialog'
+import {modal} from './Dialog'
 
 function DialogExample (){
   const [x,setX] = useState(false);
+  const openModal = ()=>{
+      const close = modal(
+        <h3> 测试内容
+          <button onClick={()=>close()} >close</button>
+        </h3>);
+  }
   return (
     <div >
       <div>
@@ -31,6 +38,13 @@ function DialogExample (){
         <button onClick={()=>confirm ('这是一个测试内容',()=>{console.log('点击了yes');},
           ()=>{console.log('点击了no');})}>
           confirm
+        </button>
+      </div>
+      <div>
+        <h2>example 4： modal 弹窗</h2>
+
+        <button onClick={openModal}>
+          modal
         </button>
       </div>
     </div>
