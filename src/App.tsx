@@ -4,7 +4,8 @@ import './App.css';
 import iconExample from './components/Icon/iconExample';
 import buttonExample from './components/Button/buttonExample';
 import dialogExample from './components/Dialog/dialogExample';
-import Icon from './components/Icon/Icon'
+
+
 
 
 function App() {
@@ -19,9 +20,11 @@ function App() {
         <aside>
           <h2>组件</h2>
           <ul>
-            <li>
+            <li >
               <Link to='/icon'>
-                <span><Icon name='settings' />Icon</span>
+                <span >
+                  Icon
+                </span>
               </Link>
             </li>
             <li>

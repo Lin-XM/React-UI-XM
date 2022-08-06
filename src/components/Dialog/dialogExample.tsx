@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 import Dialog from './Dialog';
 
@@ -10,7 +10,10 @@ const Wrapper = styled.div`
 const iconExample = () => {
   return (
     <Wrapper>
-      <Dialog />
+      <button > 点我</button>
+      <Dialog visible={true} >
+        <div>hi</div>
+      </Dialog>
     </Wrapper>
   );
 };
