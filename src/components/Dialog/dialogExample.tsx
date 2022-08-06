@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Dialog from './Dialog';
 import {alert} from './Dialog'
+import {confirm} from './Dialog'
 
 function DialogExample (){
   const [x,setX] = useState(false);
@@ -24,6 +25,13 @@ function DialogExample (){
       <div>
         <h2>example 2: 使用 alert 直接出现一个弹窗</h2>
         <button onClick={()=>alert('这是一个测试内容')}>alert</button>
+      </div>
+      <div>
+        <h2>example 3： confirm 弹窗</h2>
+        <button onClick={()=>confirm ('这是一个测试内容',()=>{console.log('点击了yes');},
+          ()=>{console.log('点击了no');})}>
+          confirm
+        </button>
       </div>
     </div>
   );

@@ -31,7 +31,7 @@
   }
   .XM-Dialog-Footer{
     display: flex;
-    flex-direction: row-reverse;
+    justify-content: flex-end;
     > button{
       display: block;
       border: 1px solid grey;
@@ -43,7 +43,7 @@
       vertical-align: middle;
       padding: 4px 2px;
     }
-    :last-child{
+    :first-child{
       background: #0cece5;
       color:white;
     }
