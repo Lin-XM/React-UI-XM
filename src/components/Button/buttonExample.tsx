@@ -7,7 +7,7 @@ const Wrapper = styled.div`
 `;
 
 
-const iconExample = () => {
+const ButtonExample = () => {
   return (
     <Wrapper>
       <Button/>
@@ -15,4 +15,4 @@ const iconExample = () => {
   );
 };
 
-export default iconExample;
+export default ButtonExample;

@@ -9,7 +9,7 @@ const Wrapper = styled.div`
 `;
 
 
-const iconExample = () => {
+const IconExmaple = () => {
   return (
     <Wrapper>
       <header>
@@ -29,4 +29,4 @@ const iconExample = () => {
   );
 };
 
-export default iconExample;
+export default IconExmaple;
