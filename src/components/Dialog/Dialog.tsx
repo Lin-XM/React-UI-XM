@@ -6,7 +6,7 @@ import Icon from '../Icon/Icon';
 
 interface Props {
   visible: boolean;
-  buttons: Array<ReactElement>;
+  buttons?: Array<ReactElement>;
   onClose: React.MouseEventHandler;
   closeOnClickMask?:boolean        //点击提示框外部 是否关闭
 }
@@ -38,7 +38,7 @@ const Dialog: React.FunctionComponent<Props> = (props) => {
           {props.children}
         </main>
         <footer className="XM-Dialog-Footer">
-          { props.buttons.map((button, index) =>
+          { props.buttons &&  props.buttons.map((button, index) =>
             React.cloneElement(button, {key: index})
           )}
         </footer>
@@ -55,4 +55,19 @@ const Dialog: React.FunctionComponent<Props> = (props) => {
 Dialog.defaultProps = {
   closeOnClickMask:false
 };
+
+// 实现用户可以直接使用 alert 就出现弹窗
+const alert=(content:string)=>{
+  const component = <Dialog visible={true}  onClose={()=>{
+    ReactDOM.render(React.cloneElement(component, {visible:false}),div)
+    ReactDOM.unmountComponentAtNode(div)
+    div.remove()
+  }} >
+    {content}
+  </Dialog>
+  const div = document.createElement('div');
+  document.body.append(div);
+  ReactDOM.render(component,div);
+};
 export default Dialog;
+export {alert}

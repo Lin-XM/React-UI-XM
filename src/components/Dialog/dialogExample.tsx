@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Dialog from './Dialog';
+import {alert} from './Dialog'
 
 function DialogExample (){
   const [x,setX] = useState(false);
@@ -20,6 +21,10 @@ function DialogExample (){
         ]} onClose={()=>{setX(false)}} >
         <div>hi</div>
       </Dialog>
+      <div>
+        <h2>example 2: 使用 alert 直接出现一个弹窗</h2>
+        <button onClick={()=>alert('这是一个测试内容')}>alert</button>
+      </div>
     </div>
   );
 }
