@@ -4,6 +4,7 @@ import './App.css';
 import iconExample from './components/Icon/iconExample';
 import buttonExample from './components/Button/buttonExample';
 import dialogExample from './components/Dialog/dialogExample';
+import LayoutExample from './components/Layout/LayoutExmaple';
 
 
 
@@ -32,7 +33,9 @@ function App() {
             </li>
             <li>
               <Link to='/dialog'>Dialog</Link>
-
+            </li>
+            <li>
+              <Link to='/layout'>Layout</Link>
             </li>
           </ul>
         </aside>
@@ -40,6 +43,7 @@ function App() {
           <Route path='/icon' component={iconExample} />
           <Route path='/Button' component={buttonExample} />
           <Route path='/dialog' component={dialogExample} />
+          <Route path='/layout' component={LayoutExample} />
         </main>
       </div>
     </Router>
