@@ -79,7 +79,10 @@ export default  classes
 - 三种模式  
 alert：弹出对话框，只有确定按钮，确定后执行某个函数。  
 confirm：交互对话框，有确定和取消按钮，分别执行对应函数。  
-modal：内容对话框，仅展示内容，只有点右上角 叉叉 取消。  
+modal：内容对话框，仅展示内容，只有点右上角 叉叉 取消。
+- react 知识点
+<Fragment> 标签就不会再渲染时候出现，就相当于 <template>  
+React 克隆 element  
 ```ts
 // React.cloneElement 的用法，复制这个buttons之后，添加一个 key 在渲染。 存在 性能损失
 props.buttons.map((button, index) => React.cloneElement(button, {key: index})
@@ -91,6 +94,18 @@ props.buttons.map((button, index) => React.cloneElement(button, {key: index})
   return (
    ReactDOM.createPortal(x,document.body)
   );
+```
+
+- 闭包 实现传递 API  
+```js
+function f1(){
+    let visible = false;
+    return ()=>{
+        visible = true;
+    }
+}
+const api = f1()
+api()               //  实现修改 f1 函数内部的 visible
 ```
 
 

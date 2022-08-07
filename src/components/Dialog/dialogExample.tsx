@@ -29,10 +29,12 @@ function DialogExample (){
         ]} onClose={()=>{setX(false)}} >
         <div>hi</div>
       </Dialog>
+
       <div>
         <h2>example 2: 使用 alert 直接出现一个弹窗</h2>
         <button onClick={()=>alert('这是一个测试内容')}>alert</button>
       </div>
+
       <div>
         <h2>example 3： confirm 弹窗</h2>
         <button onClick={()=>confirm ('这是一个测试内容',()=>{console.log('点击了yes');},
