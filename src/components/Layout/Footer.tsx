@@ -1,8 +1,14 @@
 import React from 'react';
+import classes from '../../helper/classes';
 
-const Footer:React.FunctionComponent = () => {
+interface Props extends React.HTMLAttributes<HTMLElement>{
+}
+
+
+const Footer:React.FunctionComponent<Props> = (props) => {
+  const {className,children,...reset} = props
   return (
-    <div className='XM-Layout-Footer' >
+    <div className={classes('XM-Layout-Footer',className)} {...reset}>
       layout-footer
     </div>
   );
