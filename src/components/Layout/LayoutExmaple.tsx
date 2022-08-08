@@ -7,8 +7,6 @@ import Aside from './Aside';
 import './layoutExample.scss'
 
 
-
-
 const LayoutExample = () => {
   return (
     <div className='XM-Wrapper'  >

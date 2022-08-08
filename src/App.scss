@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.iconpark-icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+}
+
+.page {
+  background: white;
+
+}
+.site-content{
+  padding-top: 16px;
+}
+.site-header {
+  background-color: #eee;
+
+  .site-logo {
+    display: flex;
+    align-items: center;
+    padding: 4px 16px;
+    fill: #00ADB5;
+
+    > .XM-Icon {
+      margin: 0 4px;
+    }
+
+    > span {
+      color: #00ADB5;
+      font-size: 32px;
+    }
+  }
+
+}
+
+.site-aside {
+  border: 1px solid #eeeeee;
+
+  h2 {
+    padding: 8px 16px;
+    font-size: 18px;
+  }
+
+  ul {
+    padding: 0 16px;
+    min-width: 10em;
+
+    > li {
+      padding: 4px 16px;
+      color: #00ADB5;
+
+
+    }
+  }
+}
+.site-footer{
+  text-align: center;
+  font-size: 12px;
+  color:#666;
+  padding: 16px 0 ;
+
+  border-top: #eeeeee;
+}
+
+
