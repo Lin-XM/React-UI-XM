@@ -1,19 +1,15 @@
 .XM-Layout{
-  border:1px solid red;
   display: flex;
   flex-direction: column;
   &-Content{
     flex-grow: 1;
-    border:1px solid black;
   }
   // aside 在里面的类型
   .XM-Layout{
     display:flex;
     flex-direction: row;
     flex-grow: 1;
-    &-Aside{
-      width:100px;
-    }
+
     &-Content{
       flex-grow: 1;
     }

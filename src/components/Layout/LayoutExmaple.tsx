@@ -4,49 +4,46 @@ import Content from './Content';
 import Footer from './Footer';
 import Header from './Header';
 import Aside from './Aside';
-import styled from 'styled-components';
+import './layoutExample.scss'
 
-const Wrapper = styled.div`
-  border: 2px solid green;
-  height: 500px;
-`
+
 
 
 const LayoutExample = () => {
   return (
-    <Wrapper className='XM-Wrapper' >
+    <div className='XM-Wrapper'  >
       <div>
         <h1>example 1 </h1>
-        <Layout className ="Wrapper" style={{height:400}}>
-          <Header>header</Header>
-          <Content>content</Content>
-          <Footer>footer</Footer>
+        <Layout className ="Wrapper" style={{height:400,width:500}}>
+          <Header className='x'>header</Header>
+          <Content className='y'>content</Content>
+          <Footer className='x'> footer</Footer>
         </Layout>
       </div>
       <div>
         <h1>example 2 </h1>
-        <Layout className ="Wrapper" style={{height:400}}>
-          <Header>header</Header>
+        <Layout className ="Wrapper" style={{height:400,width:500}}>
+          <Header className='x'>header</Header>
           <Layout>
-            <Aside>Aside</Aside>
-            <Content>content</Content>
+            <Aside className='z'>Aside</Aside>
+            <Content className='y'>content</Content>
           </Layout>
-          <Footer>footer</Footer>
+          <Footer className='x'>footer</Footer>
         </Layout>
       </div>
 
       <div>
         <h1>example 3 </h1>
-        <Layout className ="Wrapper" style={{height:400}}>
-          <Aside>Aside</Aside>
+        <Layout className ="Wrapper" style={{height:400,width:500}}>
+          <Aside className='z'>Aside</Aside>
           <Layout>
-            <Header>header</Header>
-            <Content>content</Content>
-            <Footer>footer</Footer>
+            <Header className='x'>header</Header>
+            <Content className='y'>content</Content>
+            <Footer className='x'>footer</Footer>
           </Layout>
         </Layout>
       </div>
-    </Wrapper>
+    </div>
   );
 };
 export default LayoutExample;

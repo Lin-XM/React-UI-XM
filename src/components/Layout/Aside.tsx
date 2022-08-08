@@ -9,7 +9,8 @@ const Aside:React.FunctionComponent<Props> = (props) => {
   const {className,children, ...reset} = props
   return (
     <div className={classes('XM-Layout-Aside', className)} {...reset}>
-      layout-aside
+      {props.children}
+
     </div>
   );
 };

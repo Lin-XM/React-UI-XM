@@ -9,7 +9,8 @@ const Content:React.FunctionComponent<Props> = (props) => {
 
   return (
     <div className={classes('XM-Layout-Content', className)} {...reset} >
-      layout-content
+      {props.children}
+
     </div>
   );
 };

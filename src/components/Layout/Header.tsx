@@ -7,7 +7,7 @@ const Header:React.FunctionComponent<Props> = (props) => {
   const {className, children, ...reset} = props
   return (
     <div className={classes('XM-Layout-Header', className)}{...reset}>
-      layout-header
+      {props.children}
     </div>
   );
 };

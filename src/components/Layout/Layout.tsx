@@ -11,14 +11,7 @@ interface Props extends React.HTMLAttributes<HTMLElement> {
 
 const Layout: React.FunctionComponent<Props> = (props) => {
   const {className, children, ...reset} = props;
-  // let hasAside = false
-  // if((children as Array<ReactElement>).length){
-  // (children as Array<ReactElement>).map(node=>{
-  //   if(node.type === Aside){
-  //     hasAside = true
-  //   }
-  // }),
-  // }
+
 
   const childrenAsArray = children as Array<ReactElement>;
   const hasAside = childrenAsArray.length &&

@@ -9,7 +9,7 @@ const Footer:React.FunctionComponent<Props> = (props) => {
   const {className,children,...reset} = props
   return (
     <div className={classes('XM-Layout-Footer',className)} {...reset}>
-      layout-footer
+      {props.children}
     </div>
   );
 };
