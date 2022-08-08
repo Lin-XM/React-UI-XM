@@ -17,6 +17,9 @@ body {
 button,input{
   font: inherit;
 }
+pre{
+  font-family: "Fira Code Medium", Consolas,monospace;
+}
 :focus{
   outline:none;
 }

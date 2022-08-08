@@ -107,6 +107,12 @@ function f1(){
 const api = f1()
 api()               //  实现修改 f1 函数内部的 visible
 ```
+## 展示代码
+- 使用raw-loader  
+使用第三方 raw-loader，获取展示页面源代码。  
+```tsx
+require('!!raw-loader!./iconExample').default
+```
 
 
 
