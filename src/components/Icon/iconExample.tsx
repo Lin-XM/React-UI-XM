@@ -1,15 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import Icon from './Icon';
-
 const Wrapper = styled.div`
-     border:1px solid red;
      display: flex;
      flex-direction: column;
 `;
 
 
-const IconExmaple = () => {
+const IconExample = () => {
   return (
     <Wrapper>
       <header>
@@ -21,7 +19,12 @@ const IconExmaple = () => {
         <div>
           <span>这个组件有一个必须的参数【name】就是 svg 的名字.</span>
           <span>也支持点击、鼠标、悬浮等各种事件，默认高宽 [1.4em]。</span>
-          <Icon name='settings' />
+          <div className='ex-icon'>
+            <Icon name='settings' />
+            <Icon name='close' />
+            <Icon name='loading' />
+            <Icon name='thumbs-up' />
+          </div>
         </div>
       </main>
 
@@ -29,4 +32,4 @@ const IconExmaple = () => {
   );
 };
 
-export default IconExmaple;
+export default IconExample;

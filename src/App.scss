@@ -15,11 +15,13 @@
 
 }
 .site-content{
-  padding-top: 16px;
+  padding: 16px 8px;
+  border: 1px solid #eeeeee;
+
 }
 .site-header {
   background-color: #eee;
-
+  margin-bottom:2px;
   .site-logo {
     display: flex;
     align-items: center;
@@ -47,14 +49,22 @@
   }
 
   ul {
-    padding: 0 16px;
     min-width: 10em;
 
     > li {
-      padding: 4px 16px;
-      color: #00ADB5;
+      a{
+        color: black;
+        padding: 8px 16px;
+        display: block;
 
-
+        &:hover{
+          color: #00ADB5;
+        }
+        &.active{
+          color:white;
+          background-color: desaturate(#00ADB5, 20%);
+        }
+      }
     }
   }
 }
@@ -63,8 +73,7 @@
   font-size: 12px;
   color:#666;
   padding: 16px 0 ;
-
-  border-top: #eeeeee;
+  border-top: #999;
 }
 
 
