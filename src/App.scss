@@ -10,72 +10,105 @@
   vertical-align: -0.15em;
 }
 
+.site{
+
+}
 .page {
   background: white;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  .site-header {
+    background-color: #eee;
+    margin-bottom:2px;
+    .site-logo {
+      display: flex;
+      align-items: center;
+      padding: 4px 16px;
+      fill: #00ADB5;
 
-}
-.site-content{
-  padding: 16px 8px;
-  border: 1px solid #eeeeee;
+      > .XM-Icon {
+        margin: 0 4px;
+      }
 
-}
-.site-header {
-  background-color: #eee;
-  margin-bottom:2px;
-  .site-logo {
+      > span {
+        color: #00ADB5;
+        font-size: 32px;
+      }
+    }
+
+  }
+
+
+  .site-main{
     display: flex;
-    align-items: center;
-    padding: 4px 16px;
-    fill: #00ADB5;
-
-    > .XM-Icon {
-      margin: 0 4px;
+    flex-direction: row;
+    flex-grow: 1;
+    .site-content{
+      padding: 16px 8px;
+      border: 1px solid #eee;
+      min-width: 90%;
     }
 
-    > span {
-      color: #00ADB5;
-      font-size: 32px;
-    }
-  }
-
-}
-
-.site-aside {
-  border: 1px solid #eeeeee;
-
-  h2 {
-    padding: 8px 16px;
-    font-size: 18px;
-  }
-
-  ul {
-    min-width: 10em;
-
-    > li {
-      a{
-        color: black;
+    .site-aside {
+      border: 1px solid #eeeeee;
+      min-width: 160px;
+      h2 {
         padding: 8px 16px;
-        display: block;
+        font-size: 18px;
+      }
 
-        &:hover{
-          color: #00ADB5;
-        }
-        &.active{
-          color:white;
-          background-color: desaturate(#00ADB5, 20%);
+      ul {
+        min-width: 10em;
+
+        > li {
+          a{
+            color: black;
+            padding: 8px 16px;
+            display: block;
+
+            &:hover{
+              color: #00ADB5;
+            }
+            &.active{
+              color:white;
+              background-color: desaturate(#00ADB5, 20%);
+            }
+          }
         }
       }
     }
   }
+
+
+
+  .site-footer{
+    text-align: center;
+    font-size: 12px;
+    color:#666;
+    padding: 16px 0 ;
+    border-top: #999;
+  }
 }
-.site-footer{
-  text-align: center;
-  font-size: 12px;
-  color:#666;
-  padding: 16px 0 ;
-  border-top: #999;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 展示页的代码
 .example{
   padding: 16px 0 ;
 
@@ -109,6 +142,14 @@
 
         }
       }
+    }
+    .exampleCode3{
+      border-bottom:1px solid #999;
+      padding:16px 16px;
+      > div{
+        padding: 16px 0 ;
+      }
+
     }
     .onclickCode{
     text-align: center;
