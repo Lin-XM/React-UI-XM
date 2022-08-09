@@ -2,7 +2,6 @@ import React from 'react';
 import {HashRouter as Router, NavLink, Route} from 'react-router-dom';
 import './App.scss';
 import iconDemo from './components/Icon/iconDemo';
-import dialogExample from './components/Dialog/dialogExample';
 import LayoutExample from './components/Layout/LayoutExmaple';
 import Layout from './components/Layout/Layout';
 import Header from './components/Layout/Header';
@@ -10,6 +9,7 @@ import Aside from './components/Layout/Aside';
 import Content from './components/Layout/Content';
 import Footer from './components/Layout/Footer';
 import Icon from './components/Icon/Icon';
+import DialogDemo from './components/Dialog/dialogDemo';
 
 
 
@@ -45,7 +45,7 @@ function App() {
         </Aside >
         <Content className='site-content' >
           <Route path='/icon' component={iconDemo} />
-          <Route path='/dialog' component={dialogExample} />
+          <Route path='/dialog' component={DialogDemo} />
           <Route path='/layout' component={LayoutExample} />
         </Content>
       </Layout>

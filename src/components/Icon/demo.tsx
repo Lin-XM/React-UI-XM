@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Highlight,{defaultProps} from 'prism-react-renderer'
-import Icon from './Icon/Icon';
+import Icon from './Icon';
 
 interface Props {
   code: string
@@ -30,8 +30,8 @@ const Demo:React.FunctionComponent<Props> =  (props)=>{
           <span>也支持点击、鼠标、悬浮等各种事件，默认高宽 [1.4em]。</span>
       </div>
 
-      <div className="iconCode">
-        <div className='ex-icon'>
+      <div className="XM-Code">
+        <div className='exampleCode'>
           <Icon name='settings' />
           <Icon name='close' />
           <Icon name='loading' />
@@ -39,7 +39,7 @@ const Demo:React.FunctionComponent<Props> =  (props)=>{
           <Icon name='download' />
         </div>
 
-        <div className="buttonCode" onClick={()=>{setVisible(!visible)}}>展示代码</div>
+        <div className="onclickCode" onClick={()=>{setVisible(!visible)}}>展示代码</div>
 
 
       </div>
